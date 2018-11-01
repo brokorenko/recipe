@@ -3,5 +3,10 @@ package com.andy.recipe.repositories;
 import com.andy.recipe.model.Category;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.Optional;
+
 public interface CategoryRepository extends CrudRepository<Category, Long> {
+
+    Optional<Category> findById(Long var1);
+
 }
